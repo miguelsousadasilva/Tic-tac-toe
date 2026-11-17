@@ -23,26 +23,39 @@ public class tictactoe{
   }
   
   public static void game(int dificultad){
-    
     String [] tablero = new String [9]; 
-    System.out.println(""+tablero[1]+""+"|"+""+tablero[2]+""+"|"+""+tablero[3]+"");
-    System.out.println(""+tablero[4]+""+"|"+""+tablero[5]+""+"|"+""+tablero[8]+"");
-    System.out.println(""+tablero[7]+""+"|"+""+tablero[8]+""+"|"+""+tablero[9]+"");
-    if(turno==1){
-      tablero[ia]="x";
-      turno--;
-    }
-    if(turno==0){
-      tablero[imput()];
-      turno++;
-    }
+    do{
+      System.out.println(""+tablero[1]+""+"|"+""+tablero[2]+""+"|"+""+tablero[3]+"");
+      System.out.println("---+---+---");
+      System.out.println(""+tablero[4]+""+"|"+""+tablero[5]+""+"|"+""+tablero[8]+"");
+      System.out.println("---+---+---");
+      System.out.println(""+tablero[7]+""+"|"+""+tablero[8]+""+"|"+""+tablero[9]+"");
+      if(turno==1){
+        tablero[ia()]="x";
+        turno--;
+      }
+      if(turno==0){
+        tablero[imput()]="o";
+        turno++;
+      }
+    }while();
   }
   
   public static int ia(){
     
   }
+  public static boolean tresEnRaya(){
   
-   public static int imput(){
+  }
+  
+  public static void aux(String []tablero){
+    String [] aux = new String [9];
+    for(int i; i<10; 1++){
+      aux[0]=tablero[0];
+    }
+  }
+  
+  public static int imput(){
     Scanner sc = new scanner(System.in);
     do{
       int imp="";
